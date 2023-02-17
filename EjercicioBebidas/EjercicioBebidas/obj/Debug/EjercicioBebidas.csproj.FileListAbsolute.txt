@@ -1,0 +1,8 @@
+C:\Users\adoX1\OneDrive\Documents\VisualStudio\EjercicioBebidas\EjercicioBebidas\bin\Debug\EjercicioBebidas.exe.config
+C:\Users\adoX1\OneDrive\Documents\VisualStudio\EjercicioBebidas\EjercicioBebidas\bin\Debug\EjercicioBebidas.exe
+C:\Users\adoX1\OneDrive\Documents\VisualStudio\EjercicioBebidas\EjercicioBebidas\bin\Debug\EjercicioBebidas.pdb
+C:\Users\adoX1\OneDrive\Documents\VisualStudio\EjercicioBebidas\EjercicioBebidas\obj\Debug\EjercicioBebidas.csproj.AssemblyReference.cache
+C:\Users\adoX1\OneDrive\Documents\VisualStudio\EjercicioBebidas\EjercicioBebidas\obj\Debug\EjercicioBebidas.csproj.SuggestedBindingRedirects.cache
+C:\Users\adoX1\OneDrive\Documents\VisualStudio\EjercicioBebidas\EjercicioBebidas\obj\Debug\EjercicioBebidas.csproj.CoreCompileInputs.cache
+C:\Users\adoX1\OneDrive\Documents\VisualStudio\EjercicioBebidas\EjercicioBebidas\obj\Debug\EjercicioBebidas.exe
+C:\Users\adoX1\OneDrive\Documents\VisualStudio\EjercicioBebidas\EjercicioBebidas\obj\Debug\EjercicioBebidas.pdb
