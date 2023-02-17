@@ -12,6 +12,7 @@ namespace EjercicioBebidas
         static void Main(string[] args)
         {
             Cliente cliente = new Cliente();
+            Empleado empleado = new Empleado();
 
             Console.WriteLine("------ BIENVENIDO ------");
             Console.WriteLine("Cual es su edad: ");
@@ -39,9 +40,11 @@ namespace EjercicioBebidas
                         case 1:
                             cliente.DatosC();
                             cate.Alcoholicas();
+                            empleado.DatosE();
                             //insertar aca el metodo de pedir datos del empleado
                             cate.MostrarB();
                             cliente.imprimirCliente();
+                            empleado.imprimirEmpleado();
                             //insertar aca el metodo de mostrar datos del empleado
                             //hacer lo mismo en todos los demas casos
                             break;
@@ -49,13 +52,19 @@ namespace EjercicioBebidas
                         case 2:
 
                             cate.Jugos();
+                            empleado.DatosE();
                             cate.MostrarB();
+                            empleado.imprimirEmpleado();
                             break;
 
                         case 3:
+                            empleado.DatosE();
+                            empleado.imprimirEmpleado();
                             break;
 
                         case 4:
+                            empleado.DatosE();
+                            empleado.imprimirEmpleado();
                             break;
 
                         default:
@@ -84,17 +93,23 @@ namespace EjercicioBebidas
                         case 1:
                             cliente.DatosC();
                             cate.Jugos();
+                            empleado.DatosE();
                             //insertar aca el metodo de pedir datos del empleado
                             cate.MostrarB();
                             cliente.imprimirCliente();
+                            empleado.imprimirEmpleado();
                             //insertar aca el metodo de mostrar datos del empleado
                             //hacer lo mismo en todos los demas casos
                             break;
 
                         case 2:
+                            empleado.DatosE();
+                            empleado.imprimirEmpleado();
                             break;
 
                         case 3:
+                            empleado.DatosE();
+                            empleado.imprimirEmpleado();
                             break;
 
                         default:
@@ -320,8 +335,36 @@ namespace EjercicioBebidas
         }
         
     }
+    class Empleado : Persona
+    {
 
-    
+        public void DatosE()
+        {
+            Console.WriteLine("Escriba los datos de empleado : ");
+            Console.WriteLine("Nombre: ");
+            Nombre = Console.ReadLine();
+            Console.WriteLine("Apellido: ");
+            Apellido = Console.ReadLine();
+            Console.WriteLine("Telefono: ");
+            Telefono = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("*** PROCESANDO DATOS *** \n \n");
+
+
+        }
+
+        public void imprimirEmpleado()
+        {
+            Console.WriteLine("*** DATOS Empleado ***");
+            Console.WriteLine("Nombre: " + Nombre +
+                              "\nApellido: " + Apellido +
+                              "\nTelefono: " + Telefono +
+                              "\n");
+            Console.ReadLine();
+
+        }
+
+    }
+
 
 
 }
