@@ -50,7 +50,7 @@ namespace EjercicioBebidas
                             break;
 
                         case 2:
-
+                            cliente.DatosC();
                             cate.Jugos();
                             empleado.DatosE();
                             cate.MostrarB();
@@ -58,12 +58,18 @@ namespace EjercicioBebidas
                             break;
 
                         case 3:
+                            cliente.DatosC();
+                            cate.Sodas();
                             empleado.DatosE();
+                            cate.MostrarB();
                             empleado.imprimirEmpleado();
                             break;
 
                         case 4:
+                            cliente.DatosC();
+                            cate.Calientes();
                             empleado.DatosE();
+                            cate.MostrarB();
                             empleado.imprimirEmpleado();
                             break;
 
@@ -103,12 +109,18 @@ namespace EjercicioBebidas
                             break;
 
                         case 2:
+                            cliente.DatosC();
+                            cate.Sodas();
                             empleado.DatosE();
+                            cate.MostrarB();
                             empleado.imprimirEmpleado();
                             break;
 
                         case 3:
+                            cliente.DatosC();
+                            cate.Calientes();
                             empleado.DatosE();
+                            cate.MostrarB();
                             empleado.imprimirEmpleado();
                             break;
 
@@ -122,6 +134,7 @@ namespace EjercicioBebidas
                 }
                 Console.ReadLine();
             }
+
             
 
         }
@@ -243,6 +256,113 @@ namespace EjercicioBebidas
 
             
         }
+
+        public void Sodas()
+        {
+            categoria = "Gaseosa";
+            //bebidas alcoholicas
+            Console.WriteLine("Seleccione el tipo de bebida que desea: ");
+            Console.WriteLine("1. Coca Cola");
+            Console.WriteLine("Precio: $2.00");
+            Console.WriteLine("2. Pepsi");
+            Console.WriteLine("Precio: $1.50");
+            Console.WriteLine("3. Mirinda");
+            Console.WriteLine("Precio: $0.75");
+            opcT = Convert.ToInt32(Console.ReadLine());
+
+            switch (opcT)
+            {
+                case 1:
+                    nombreB = "Coca Cola";
+                    precio = 2.00;
+                    codigo = "ccl0051";
+                    Console.Clear();
+                    Console.WriteLine("Como desea la preparacion de su bebida");
+                    preparacionB = Console.ReadLine();
+                    break;
+
+                case 2:
+
+                    nombreB = "Pepsi";
+                    precio = 1.50;
+                    codigo = "pps231";
+                    Console.Clear();
+                    Console.WriteLine("Como desea la preparacion de su bebida");
+                    preparacionB = Console.ReadLine();
+                    break;
+
+                case 3:
+                    nombreB = "Mirinda";
+                    precio = 0.75;
+                    codigo = "mrd093";
+                    Console.Clear();
+                    Console.WriteLine("Como desea la preparacion de su bebida");
+                    preparacionB = Console.ReadLine();
+                    break;
+
+                default:
+                    Console.Clear();
+                    Sodas();
+                    break;
+            }
+
+
+
+        }
+
+        public void Calientes()
+        {
+            categoria = "Gaseosa";
+            //bebidas alcoholicas
+            Console.WriteLine("Seleccione el tipo de bebida que desea: ");
+            Console.WriteLine("1. Cafe");
+            Console.WriteLine("Precio: $3.00");
+            Console.WriteLine("2. Leche");
+            Console.WriteLine("Precio: $2.50");
+            Console.WriteLine("3. Capuchino");
+            Console.WriteLine("Precio: $3.75");
+            opcT = Convert.ToInt32(Console.ReadLine());
+
+            switch (opcT)
+            {
+                case 1:
+                    nombreB = "Cafe";
+                    precio = 2.00;
+                    codigo = "ccl0051";
+                    Console.Clear();
+                    Console.WriteLine("Como desea la preparacion de su bebida");
+                    preparacionB = Console.ReadLine();
+                    break;
+
+                case 2:
+
+                    nombreB = "Leche";
+                    precio = 1.50;
+                    codigo = "pps231";
+                    Console.Clear();
+                    Console.WriteLine("Como desea la preparacion de su bebida");
+                    preparacionB = Console.ReadLine();
+                    break;
+
+                case 3:
+                    nombreB = "Capuchino";
+                    precio = 0.75;
+                    codigo = "mrd093";
+                    Console.Clear();
+                    Console.WriteLine("Como desea la preparacion de su bebida");
+                    preparacionB = Console.ReadLine();
+                    break;
+
+                default:
+                    Console.Clear();
+                    Calientes();
+                    break;
+            }
+
+
+
+        }
+
 
         public void MostrarB()
         {
