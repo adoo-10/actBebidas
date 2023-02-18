@@ -26,7 +26,7 @@ namespace EjercicioBebidas
                 {
                     Console.WriteLine("------------ Bienvenido ------------");
                     Console.WriteLine("Seleccione la categoria de la que desea adquirir su bebida: ");
-                    Console.WriteLine("1. Bebidas Alcoholicas \n" + "2. Jugos Naturales \n " + "3.Gaseosas \n" + "4. Bebidas Calientes \n");
+                    Console.WriteLine("1. Bebidas Alcoholicas \n" + "2. Jugos Naturales \n" + "3. Gaseosas \n" + "4. Bebidas Calientes \n");
                     Categoria cate = new Categoria();
                     cate.opc = Convert.ToInt32(Console.ReadLine());
                     Console.Clear();
@@ -41,12 +41,9 @@ namespace EjercicioBebidas
                             cliente.DatosC();
                             cate.Alcoholicas();
                             empleado.DatosE();
-                            //insertar aca el metodo de pedir datos del empleado
                             cate.MostrarB();
                             cliente.imprimirCliente();
                             empleado.imprimirEmpleado();
-                            //insertar aca el metodo de mostrar datos del empleado
-                            //hacer lo mismo en todos los demas casos
                             break;
 
                         case 2:
@@ -54,6 +51,7 @@ namespace EjercicioBebidas
                             cate.Jugos();
                             empleado.DatosE();
                             cate.MostrarB();
+                            cliente.imprimirCliente();
                             empleado.imprimirEmpleado();
                             break;
 
@@ -62,6 +60,7 @@ namespace EjercicioBebidas
                             cate.Sodas();
                             empleado.DatosE();
                             cate.MostrarB();
+                            cliente.imprimirCliente();
                             empleado.imprimirEmpleado();
                             break;
 
@@ -70,6 +69,7 @@ namespace EjercicioBebidas
                             cate.Calientes();
                             empleado.DatosE();
                             cate.MostrarB();
+                            cliente.imprimirCliente();
                             empleado.imprimirEmpleado();
                             break;
 
@@ -89,7 +89,7 @@ namespace EjercicioBebidas
                 {
                     Console.WriteLine("------------ Bienvenido ------------");
                     Console.WriteLine("Seleccione la categoria de la que desea adquirir su bebida: ");
-                    Console.WriteLine("1. Jugos Naturales \n " + "2.Gaseosas \n" + "3. Bebidas Calientes \n");
+                    Console.WriteLine("1. Jugos Naturales \n" + "2. Gaseosas \n" + "3. Bebidas Calientes \n");
                     Categoria cate = new Categoria();
                     cate.opc = Convert.ToInt32(Console.ReadLine());
                     Console.Clear();
@@ -100,12 +100,9 @@ namespace EjercicioBebidas
                             cliente.DatosC();
                             cate.Jugos();
                             empleado.DatosE();
-                            //insertar aca el metodo de pedir datos del empleado
                             cate.MostrarB();
                             cliente.imprimirCliente();
                             empleado.imprimirEmpleado();
-                            //insertar aca el metodo de mostrar datos del empleado
-                            //hacer lo mismo en todos los demas casos
                             break;
 
                         case 2:
@@ -113,6 +110,7 @@ namespace EjercicioBebidas
                             cate.Sodas();
                             empleado.DatosE();
                             cate.MostrarB();
+                            cliente.imprimirCliente();
                             empleado.imprimirEmpleado();
                             break;
 
@@ -121,6 +119,7 @@ namespace EjercicioBebidas
                             cate.Calientes();
                             empleado.DatosE();
                             cate.MostrarB();
+                            cliente.imprimirCliente();
                             empleado.imprimirEmpleado();
                             break;
 
@@ -312,7 +311,7 @@ namespace EjercicioBebidas
 
         public void Calientes()
         {
-            categoria = "Gaseosa";
+            categoria = "Bebida Caliente";
             //bebidas alcoholicas
             Console.WriteLine("Seleccione el tipo de bebida que desea: ");
             Console.WriteLine("1. Cafe");
@@ -366,7 +365,6 @@ namespace EjercicioBebidas
 
         public void MostrarB()
         {
-            Console.Clear();
             Console.WriteLine("-----> RECIBO BEBIDA <----- \n \n");
             Console.WriteLine("***** BEBIDA *****");
             Console.WriteLine("Bebida: " + nombreB);
@@ -448,18 +446,20 @@ namespace EjercicioBebidas
             else
             {
                 Console.WriteLine("Documento identificacion: " + duiC);
+                Console.WriteLine("Telefono: " + Telefono);
             }
             Console.WriteLine("\n");
-            Console.ReadLine();
 
         }
         
     }
     class Empleado : Persona
     {
+        public string idE;
 
         public void DatosE()
         {
+            Console.Clear();
             Console.WriteLine("Escriba los datos de empleado : ");
             Console.WriteLine("Nombre: ");
             Nombre = Console.ReadLine();
@@ -467,7 +467,10 @@ namespace EjercicioBebidas
             Apellido = Console.ReadLine();
             Console.WriteLine("Telefono: ");
             Telefono = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Codigo de Empleado: ");
+            idE = Console.ReadLine();
             Console.WriteLine("*** PROCESANDO DATOS *** \n \n");
+            Console.Clear();
 
 
         }
@@ -478,7 +481,9 @@ namespace EjercicioBebidas
             Console.WriteLine("Nombre: " + Nombre +
                               "\nApellido: " + Apellido +
                               "\nTelefono: " + Telefono +
-                              "\n");
+                              "\nCodigo: " + idE +
+                              "\n" +
+                              "\n-----> Gracias por su compra <-----");
             Console.ReadLine();
 
         }
